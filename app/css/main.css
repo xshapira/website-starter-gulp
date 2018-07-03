@@ -1,0 +1,22 @@
+@tailwind preflight;
+@tailwind components;
+
+h1,h2,h3,h4,h5,h6 { @apply .mb-4 .leading-tight; }
+p,ul,ol,table { @apply .mb-4; }
+ul ul,ul ol,ol ol,ol ul { @apply .mb-0; }
+table table { @apply .mb-0; }
+iframe { @apply .mb-4; }
+
+.transition { transition: all .25s; }
+
+.collapse { display: none; }
+.collapse.in { display: block; }
+.collapsing { position:relative;height:0;overflow:hidden;-webkit-transition-timing-function:ease;-o-transition-timing-function:ease;transition-timing-function:ease;-webkit-transition-duration:.35s;-o-transition-duration:.35s;transition-duration:.35s;-webkit-transition-property:height,visibility;-o-transition-property:height,visibility;transition-property:height,visibility; }
+
+.tab-content > .tab-pane { display: none; }
+.tab-content > .active { display: block; }
+
+.fade { opacity: 0; transition: opacity .15s; }
+.fade.in { opacity: 1; }
+
+@tailwind utilities;
