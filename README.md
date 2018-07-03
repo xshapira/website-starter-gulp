@@ -2,6 +2,10 @@
 
 A super simple basic web project setup using Gulp, Tailwind, and some CSS & JS compressors.
 
+### Requirements
+
+* [node.js](https://nodejs.org/)
+
 ### Usage
 
 1. Download the project and extract to a folder on your system.
@@ -13,4 +17,3 @@ A super simple basic web project setup using Gulp, Tailwind, and some CSS & JS c
 `./node_modules/.bin/gulp watch`
 
 When you edit the files in the `app` folder they will get compiled and moved to `dist`, and your browser will auto reload to show the results.
-
