@@ -12,4 +12,4 @@ A super simple basic web project setup using Gulp, Tailwind, and some CSS & JS c
 
 `./node_modules/.bin/gulp watch`
 
-Now when you edit the files in the `app` folder the will get compiled and moved to `dist` and your browser will auto reload to show the results.
+Now when you edit the files in the `app` folder the will get compiled and moved to `dist`, and your browser will auto reload to show the results.
