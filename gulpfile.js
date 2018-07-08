@@ -2,6 +2,7 @@ let gulp = require('gulp');
 let browserSync = require('browser-sync').create();
 let postcss = require('gulp-postcss');
 let tailwindcss = require('tailwindcss');
+let purgecss = require('gulp-purgecss');
 let autoprefixer = require('gulp-autoprefixer');
 let cleanCSS = require('gulp-clean-css');
 let concat = require('gulp-concat');
@@ -13,6 +14,19 @@ gulp.task('css', function(){
     .pipe(postcss([
       tailwindcss('./tailwind.js'),
     ]))
+    .pipe(purgecss({
+      content: ['./app/**/*.html', './app/**/*.js'],
+      extractors: [
+        {
+          extractor: class TailwindExtractor {
+            static extract(content) {
+              return content.match(/[A-Za-z0-9-_:\/]+/g) || [];
+            }
+          },
+          extensions: ['html', 'js']
+        }
+      ]
+    }))
     .pipe(autoprefixer({
         browsers: ['last 2 versions'],
         cascade: false
