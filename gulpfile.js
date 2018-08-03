@@ -57,7 +57,7 @@ gulp.task('html', function(){
 gulp.task('watch', function(){
   // ./node_modules/.bin/gulp watch
   browserSync.init({server: { baseDir: "./dist/" }});
-  gulp.watch(['app/css/**/*.css', './tailwind.js'], ['css']);
+  gulp.watch(['app/css/**/*.css', './tailwind.js', 'app/**/*.html'], ['css']);
   gulp.watch('app/js/**/*.js', ['js']);
   gulp.watch('app/**/*.html', ['html']);
 });
