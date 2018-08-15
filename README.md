@@ -1,6 +1,6 @@
 # website-starter-gulp
 
-A super simple basic web project setup using Gulp, Tailwind, and some CSS & JS compressors.
+A super basic web project setup using Gulp, Tailwind, and some CSS & JS compressors.
 
 ### Requirements
 
