@@ -54,8 +54,8 @@ gulp.task('html', function(){
   .pipe(browserSync.reload({stream:true}));
 });
 
-gulp.task('watch', function(){
-  // ./node_modules/.bin/gulp watch
+gulp.task('default', function(){
+  // $ ./node_modules/.bin/gulp
   browserSync.init({server: { baseDir: "./dist/" }});
   gulp.watch(['app/css/**/*.css', './tailwind.js', 'app/**/*.html'], ['css']);
   gulp.watch('app/js/**/*.js', ['js']);
