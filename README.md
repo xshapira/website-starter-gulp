@@ -14,6 +14,6 @@ A super basic web project setup using Gulp, Tailwind, and some CSS & JS compress
 
 `npm install` - you only need to do this the first time
 
-`./node_modules/.bin/gulp watch`
+`./node_modules/.bin/gulp`
 
 When you edit the files in the `app` folder they will get compiled and moved to `dist`, and your browser will auto reload to show the results.
