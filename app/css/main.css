@@ -9,7 +9,7 @@ iframe { @apply .mb-4; }
 
 @tailwind utilities;
 
-@responsive {
+@variants responsive {
   .transition { transition: all .25s; }
   .transition-slow { transition: all .5s; }
   .transition-fast { transition: all .1s; }
