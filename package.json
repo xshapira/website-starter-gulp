@@ -1,25 +1,25 @@
 {
-  "name": "website-gulp-starter",
+  "name": "project-name",
   "version": "1.0.0",
-  "description": "Super simple website starter kit",
-  "main": "./dist/index.html",
+  "description": "project description",
+  "main": "index.js",
   "scripts": {
+    "update:packages": "node wipe-dependencies.js && rm -rf node_modules && npm update --save-dev && npm update --save",
     "postinstall": "./node_modules/.bin/gulp css && ./node_modules/.bin/gulp js && ./node_modules/.bin/gulp html"
   },
-  "author": "Craig Erskine",
+  "author": "Your Name",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.26.3",
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-clean-css": "^4.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-hash": "^4.2.2",
-    "gulp-hash-references": "^3.0.1",
-    "gulp-postcss": "^8.0.0",
-    "gulp-purgecss": "^1.1.1",
-    "gulp-rename": "^1.4.0",
-    "gulp-uglify": "^3.0.1",
-    "tailwindcss": "^0.7.4"
+    "browser-sync": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-clean-css": "*",
+    "gulp-concat": "*",
+    "gulp-hash": "*",
+    "gulp-hash-references": "*",
+    "gulp-postcss": "*",
+    "gulp-purgecss": "*",
+    "gulp-uglify": "*",
+    "tailwindcss": "*"
   }
 }

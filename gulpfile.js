@@ -6,7 +6,6 @@ let purgecss = require('gulp-purgecss');
 let autoprefixer = require('gulp-autoprefixer');
 let cleanCSS = require('gulp-clean-css');
 let concat = require('gulp-concat');
-let rename = require('gulp-rename');
 let uglify = require('gulp-uglify');
 let hash = require('gulp-hash');
 let references = require('gulp-hash-references');
@@ -14,23 +13,15 @@ let references = require('gulp-hash-references');
 gulp.task('css', function(){
   return gulp.src('./app/css/main.css')
   .pipe(postcss([
-    tailwindcss('./tailwind.js'),
+    tailwindcss('./tailwind.config.js'),
   ]))
   .pipe(purgecss({
     content: ['./app/**/*.html', './app/**/*.js'],
-    extractors: [
-      {
-        extractor: class TailwindExtractor {
-          static extract(content) {
-            return content.match(/[A-Za-z0-9-_:\/]+/g) || [];
-          }
-        },
-        extensions: ['html', 'js']
-      }
-    ]
+    defaultExtractor: content =>
+      content.match(/[\w-/:]+(?<!:)/g) || []
   }))
   .pipe(autoprefixer({
-    browsers: ['last 2 versions'],
+    overrideBrowserslist: ['last 2 versions'],
     cascade: false
   }))
   .pipe(cleanCSS({compatibility: 'ie8'}))
@@ -68,7 +59,7 @@ gulp.task('html', function(){
 
 gulp.task('default', function(){
   // $ ./node_modules/.bin/gulp
-  gulp.watch(['app/css/**/*.css', './tailwind.js', 'app/index.html'], gulp.series('css', 'html'));
+  gulp.watch(['app/css/**/*.css', './tailwind.config.js', 'app/index.html'], gulp.series('css', 'html'));
   gulp.watch('app/js/**/*.js', gulp.series('js', 'html'));
   gulp.watch('app/index.html', gulp.series('html'));
   bs.watch('./dist/index.html').on('change', bs.reload);

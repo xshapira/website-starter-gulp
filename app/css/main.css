@@ -1,17 +1,17 @@
-@tailwind preflight;
+@tailwind base;
 @tailwind components;
 
-h1,h2,h3,h4,h5,h6 { @apply .mb-4 .leading-tight; }
-p,ul,ol,table { @apply .mb-4; }
-ul ul,ul ol,ol ol,ol ul { @apply .mb-0; }
-table table { @apply .mb-0; }
-iframe { @apply .mb-4; }
+/* add your css */
+h1,h2,h3,h4,h5,h6 { @apply mb-4 leading-tight; }
+p,ul,ol,table { @apply mb-4; }
+ul,ol { @apply list-disc list-inside; }
+ul ul,ul ol,ol ol,ol ul { @apply mb-0 pl-6; }
+table table { @apply mb-0; }
+iframe { @apply mb-4; }
+img,svg { @apply inline-block; }
 
 @tailwind utilities;
 
 @variants responsive {
   .transition { transition: all .25s; }
-  .transition-slow { transition: all .5s; }
-  .transition-fast { transition: all .1s; }
-  .transition-none { transition: none; }
 }
