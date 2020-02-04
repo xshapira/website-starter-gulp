@@ -9,7 +9,7 @@
 </head>
 <body class="bg-gray-900 text-gray-500 font-sans leading-normal">
 
-  <div class="mx-auto py-8 px-4 xl:px-0 max-w-5xl">
+  <main class="mx-auto py-8 px-4 xl:px-0 max-w-5xl">
     <h3 class="uppercase opacity-50">Elements</h3>
     <h1 class="text-2xl font-bold">Heading 1</h1>
     <p>This was built with <a href="https://tailwindcss.com/" class="font-bold text-white hover:text-gray-600 focus:text-gray-600 hover:underline focus:underline transition">Tailwind CSS</a>. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo sunt ducimus vel velit sit eum ipsam numquam, ad aut porro possimus voluptatum excepturi nulla voluptas recusandae eaque rem soluta consequatur!</p>
@@ -25,10 +25,18 @@
       <div class="p-2 md:flex-1">This block is stretchy and will change size more dynamically to fill the space depending on the parent container.</div>
       <div class="p-2 md:w-32 bg-gray-800 text-center flex-none">Fixed width: 8rem</div>
     </div>
+  </main>
 
-  </div>
+  <footer class="py-4 text-gray-700 text-xs text-center flex items-center justify-center relative pin-auto">
+    Made with <svg xmlns="http://www.w3.org/2000/svg" class="mx-2 text-red-500" width="16" height="16" viewBox="0 0 16 16" role="img" aria-labelledby="foot-love"><title id="foot-love">Love</title><polygon class="fill-current" fill-rule="evenodd" points="8 6 11 3 15 7 8 14 1 7 5 3"></polygon></svg> by <a href="https://craigerskine.com/" class="mx-2 font-bold text-blue-500 hover:underline focus:underline">Craig Erskine</a>
+  </footer>
 
   <script src="./js/main.js"></script>
+  <script>
+    $(function(){
+      // put your jquery here
+    });
+  </script>
 
   <script>
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
