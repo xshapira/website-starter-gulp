@@ -20,10 +20,7 @@ gulp.task('css', function(){
     defaultExtractor: content =>
       content.match(/[\w-/:]+(?<!:)/g) || []
   }))
-  .pipe(autoprefixer({
-    overrideBrowserslist: ['last 2 versions'],
-    cascade: false
-  }))
+  .pipe(autoprefixer())
   .pipe(cleanCSS({compatibility: 'ie8'}))
   .pipe(hash())
   .pipe(gulp.dest('./dist/css/'))
