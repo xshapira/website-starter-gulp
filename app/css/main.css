@@ -2,9 +2,8 @@
 @tailwind components;
 
 /* add your css */
-h1,h2,h3,h4,h5,h6 { @apply mb-4 leading-tight; }
+h1,h2,h3,h4,h5,h6 { @apply mb-4 leading-none; }
 p,ul,ol,table { @apply mb-4; }
-ul,ol { @apply list-disc list-inside; }
 ul ul,ul ol,ol ol,ol ul { @apply mb-0 pl-6; }
 table table { @apply mb-0; }
 iframe { @apply mb-4; }
