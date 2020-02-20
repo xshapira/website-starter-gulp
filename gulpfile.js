@@ -59,6 +59,6 @@ gulp.task('default', function(){
   gulp.watch(['app/css/**/*.css', './tailwind.config.js', 'app/index.html'], gulp.series('css', 'html'));
   gulp.watch('app/js/**/*.js', gulp.series('js', 'html'));
   gulp.watch('app/index.html', gulp.series('html'));
-  bs.watch('./dist/index.html').on('change', bs.reload);
+  gulp.watch('./dist/index.html').on('change', bs.reload);
   bs.init({server: { baseDir: "./dist/" }});
 });
