@@ -2,15 +2,12 @@
 @tailwind components;
 
 /* add your css */
-h1,h2,h3,h4,h5,h6 { @apply mb-4 leading-none; }
-p,ul,ol,table { @apply mb-4; }
-ul ul,ul ol,ol ol,ol ul { @apply mb-0 pl-6; }
-table table { @apply mb-0; }
-iframe { @apply mb-4; }
-img,svg { @apply inline-block; }
+a { @apply transition duration-200; }
+.text-shadow { text-shadow: 0 1px 3px rgba(0,0,0,.5); }
+.panels a:hover,.panels a:focus { transform: scale(1.033); }
 
 @tailwind utilities;
 
 @variants responsive {
-  .transition { transition: all .25s; }
+  
 }
