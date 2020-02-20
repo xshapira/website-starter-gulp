@@ -60,6 +60,7 @@ typings/
 # next.js build output
 .next
 
+# Extras
 .DS_Store
 dist/
 asset-manifest.json
